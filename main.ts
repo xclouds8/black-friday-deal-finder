@@ -1,6 +1,7 @@
 // VeriDeal — the entrypoint for black-friday-deal-finder-01 (Node 22, standard
 // library only). The site lives in app/ next to this file: plain static files
-// a browser opens at app/index.html, its 30 checked deals in app/data.js, no
+// a browser opens at app/index.html, its 78 checked deals in app/data.js across
+// 7 stores (Amazon, Best Buy, Walmart, Target, Kohl's, Newegg, Home Depot), no
 // build step and nothing loaded over the network. This program hands it in: it
 // copies app/ and screenshots/ beside this file to /output and writes
 // /output/dossier.json with the kit's vendored library, which the scorer

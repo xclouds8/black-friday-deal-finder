@@ -24,6 +24,7 @@ function readFilters() {
     category: params.get("category") ?? "",
     store: params.get("store") ?? "",
     minOff: Number(params.get("minoff") ?? 0) || 0,
+    verdict: params.get("verdict") ?? "",
     sort: params.get("sort") ?? "best",
   };
 }
@@ -34,6 +35,7 @@ function writeFilters(f) {
   if (f.category) params.set("category", f.category);
   if (f.store) params.set("store", f.store);
   if (f.minOff) params.set("minoff", String(f.minOff));
+  if (f.verdict) params.set("verdict", f.verdict);
   if (f.sort !== "best") params.set("sort", f.sort);
   const query = params.toString();
   history.replaceState(null, "", `#/${query ? `?${query}` : ""}`);
@@ -46,6 +48,7 @@ function applyFilters(f) {
       (f.category === "" || d.category === f.category) &&
       (f.store === "" || d.store === f.store) &&
       percentOff(d) >= f.minOff &&
+      (f.verdict === "" || d.verdict === f.verdict) &&
       (q === "" ||
         `${d.title} ${d.store} ${d.category} ${d.verdict}`.toLowerCase().includes(q)),
   );
@@ -65,6 +68,7 @@ function renderList() {
     category: f.category,
     store: f.store,
     minOff: f.minOff,
+    verdict: f.verdict,
     sort: f.sort,
     categories: CATEGORIES,
     stores: STORES,
@@ -76,6 +80,7 @@ function renderList() {
       category: document.getElementById("f-category").value,
       store: document.getElementById("f-store").value,
       minOff: Number(document.getElementById("f-minoff").value) || 0,
+      verdict: document.getElementById("f-verdict").value,
       sort: document.getElementById("f-sort").value,
       path: "",
     };
@@ -83,7 +88,7 @@ function renderList() {
     renderList();
   };
   document.getElementById("q").addEventListener("input", rerender);
-  for (const id of ["f-category", "f-store", "f-minoff", "f-sort"]) {
+  for (const id of ["f-category", "f-store", "f-minoff", "f-verdict", "f-sort"]) {
     document.getElementById(id).addEventListener("change", rerender);
   }
 }

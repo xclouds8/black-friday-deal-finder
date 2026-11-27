@@ -14,6 +14,10 @@ const ICONS = {
     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M9 21h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M8 9.5l2.5 2L8 13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>',
   Toys:
     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M9 7V5.5A2.5 2.5 0 0 1 14 5.5V7M12 7v13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><circle cx="9" cy="12" r="1.2" /><circle cx="15" cy="12" r="1.2" /></svg>',
+  "Tools & home":
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4.5a4 4 0 0 0-5.4 5.4L4 15l1.5 1.5L10.6 11a4 4 0 0 0 5.4-5.4L13.5 8l-1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /><path d="M13 15l-2 2 5 5 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>',
+  Clothing:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 7l2 3 2-1v12h10V9l2 1 2-3-6-3a3 3 0 0 1-6 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>',
 };
 
 const FALLBACK =
